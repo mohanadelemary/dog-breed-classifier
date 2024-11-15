@@ -1,0 +1,103 @@
+Argument 1: uploaded_images/
+Argument 2: vgg
+Argument 3: dognames.txt
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Prints 10 filenames from folder
+ 1 file:         coffee_mug_01.jpg
+ 2 file:     cocker_spaniel_01.jpg
+ 3 file:     cocker_spaniel_02.jpg
+ 4 file:                cat_01.jpg
+
+Prints 10 image labels from folder
+ 1 file:                coffee mug
+ 2 file:            cocker spaniel
+ 3 file:            cocker spaniel
+ 4 file:                       cat
+
+Printing all key-value pairs in dictionary results_dic:
+Filename= coffee_mug_01.jpg    Pet Label= coffee mug
+Filename= cocker_spaniel_01.jpg    Pet Label= cocker spaniel
+Filename= cocker_spaniel_02.jpg    Pet Label= cocker spaniel
+Filename= cat_01.jpg    Pet Label= cat
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:              coffee_mug_01.jpg  label:                 coffee mug
+ 2 key:          cocker_spaniel_01.jpg  label:             cocker spaniel
+ 3 key:          cocker_spaniel_02.jpg  label:             cocker spaniel
+ 4 key:                     cat_01.jpg  label:                        cat
+
+     MATCH:
+
+             coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug
+
+         cocker_spaniel_01.jpg: 
+Real:             cocker spaniel   Classifier:                 cocker spaniel
+
+                    cat_01.jpg: 
+Real:                        cat   Classifier:                            cat
+
+ NOT A MATCH:
+
+         cocker_spaniel_02.jpg: 
+Real:             cocker spaniel   Classifier:                      Chihuahua
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+     MATCH:
+
+             coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+         cocker_spaniel_01.jpg: 
+Real:             cocker spaniel   Classifier:                 cocker spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    cat_01.jpg: 
+Real:                        cat   Classifier:                            cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+         cocker_spaniel_02.jpg: 
+Real:             cocker spaniel   Classifier:                      Chihuahua  
+PetLabelDog: 1  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 150.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+Summary of Results for vgg Model:
+----------------------------------------
+Total Images: 4
+Total Dog Images: 2
+Total Non-Dog Images: 2
+Total Matches: 3
+Correct Dogs: 1
+Correct Non-Dogs: 3
+Correct Breeds: 1
+Percentage of Matches: 75.00%
+Percentage of Correct Dogs: 50.00%
+Percentage of Correct Breeds: 50.00%
+Percentage of Correct Non-Dogs: 150.00%
+----------------------------------------
+Incorrectly Classified Dog Images:
+----------------------------------------
+Image: cocker_spaniel_02.jpg - Pet Label: cocker spaniel - Classifier Label: Chihuahua
+----------------------------------------
+Incorrectly Classified Dog Breeds:
+----------------------------------------
+----------------------------------------
+
+** Total Elapsed Runtime: 0:0:6
