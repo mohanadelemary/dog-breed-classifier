@@ -57,34 +57,33 @@ To install dependencies, run:
         - Evaluates the classification results and outputs statistics like accuracy.
 
 ## Input Files and Directories:
-
-    - pet_images/: Contains the input images to be classified. These should be placed in this directory.
-    - dognames.txt: A file containing the list of dog breed names.
-    - imagenet1000_clsid_to_human.txt: A file that maps ImageNet class IDs to breed names.
+  - pet_images/: Contains the input images to be classified. These should be placed in this directory.
+  - dognames.txt: A file containing the list of dog breed names.
+  - imagenet1000_clsid_to_human.txt: A file that maps ImageNet class IDs to breed names.
 
 ### Shell Script:
-    - run_models_batch.sh: A shell script to run classification on all images using multiple model architectures in batch.
+  - run_models_batch.sh: A shell script to run classification on all images using multiple model architectures in batch.
 
 ### Output Files:
-    - The classification results are saved to text files (e.g., alexnet_pet-images.txt), each containing the predicted breed for each image.
+  - The classification results are saved to text files (e.g., alexnet_pet-images.txt), each containing the predicted breed for each image.
 
 
 # How to Run:
 
-    - Clone repository and install dependencies:
+  - Clone repository and install dependencies:
 
 `pip install -r requirements.txt`
 
-    - Run the image classification: Use the following command to classify pet images using a specific model (e.g., alexnet):
+  - Run the image classification: Use the following command to classify pet images using a specific model (e.g., alexnet):
 
 `python check_images.py --dir pet_images/ --arch alexnet --dogfile dognames.txt > alexnet_pet-images.txt`
 
-    - You can also run batch classification: Run the batch script to classify images with multiple models:
+  - You can also run batch classification: Run the batch script to classify images with multiple models:
 
 `sh run_models_batch.sh`
 
-    - You can upload your own images of dogs and other objects to the directory and test the program.
-    - Note: This program will only work with the following model architecture inputs: resnet, alexnet, vgg.
+  - You can upload your own images of dogs and other objects to the directory and test the program.
+  - Note: This program will only work with the following model architecture inputs: resnet, alexnet, vgg.
 
 ## Conclusion
 This repository provides a practical solution for classifying dog breeds in images using deep learning models. It’s designed to be easy to use with flexibility for choosing different model architectures.
